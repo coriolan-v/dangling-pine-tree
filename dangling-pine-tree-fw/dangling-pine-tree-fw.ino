@@ -18,57 +18,26 @@ int pos1 = 180;
 int pos2 = 0;
 
 int homePos = 90;
+int delay2 = 100;
+int pos3 = 180;
+int pos4 = 0;
 
 void setup() {
   myservo.attach(10);  // attaches the servo on pin 9 to the Servo object
 
-   myservo.write(homePos);
-   delay(3000);
+  //  myservo.write(pos3);
+  //  delay(1000);
+
+  //  myservo.write(pos4);
+  //  delay(1000);
+
+    myservo.write(homePos);
+   delay(1000);
+
 }
 
 void loop() {
-  for (pos = homePos; pos <= pos1; pos += 1) { // goes from 0 degrees to 180 degrees
-    // in steps of 1 degree
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(1);                       // waits 15 ms for the servo to reach the position
-  }
+  //scene1();
 
-  delay(100);
- 
-  for (pos = pos1; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(1);                       // waits 15 ms for the servo to reach the position
-  }
-
-   delay(100);
-
-  for (pos = 0; pos <= pos1; pos += 1) { // goes from 0 degrees to 180 degrees
-    // in steps of 1 degree
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(1);                       // waits 15 ms for the servo to reach the position
-  }
-
-   delay(100);
- 
-  for (pos = pos1; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(1);                       // waits 15 ms for the servo to reach the position
-  }
-
-   delay(100);
-
-  for (pos = 0; pos <= pos1; pos += 1) { // goes from 0 degrees to 180 degrees
-    // in steps of 1 degree
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(1);                       // waits 15 ms for the servo to reach the position
-  }
- 
- delay(100);
-  
-  for (pos = pos1; pos >= homePos; pos -= 1) { // goes from 180 degrees to 0 degrees
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(1);                       // waits 15 ms for the servo to reach the position
-  }
-  
-   delay(10000);
+  scene3();
 }
